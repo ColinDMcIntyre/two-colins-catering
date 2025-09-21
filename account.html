@@ -1,0 +1,55 @@
+
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Two Colins Catering · Account</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/common.js"></script>
+<script src="js/auth.js"></script>
+</head><body>
+
+  <div class="header">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="brand"><span class="badge">Two Colins Catering</span><h1>Reliable Weekend Event Support</h1></div>
+      <nav>
+        <a href="index.html" >Home</a>
+        <a href="booking.html" >Booking</a>
+        <a href="pricing.html" >Pricing</a>
+        <a href="about.html" >About</a>
+        <a href="contact.html" >Contact</a>
+        <a href="account.html" class="active">Account</a>
+        <a href="admin.html" >Admin</a>
+      </nav>
+    </div>
+  </div>
+
+<main class="container">
+  <div class="grid-2">
+    <section class="card">
+      <h2>Log In</h2>
+      <label class="k">Username</label><input id="loginUser" />
+      <label class="k">Password</label><input id="loginPass" type="password" />
+      <button id="loginBtn" class="primary">Log In</button>
+      <p class="small">Hard-coded admin exists: <span class="code">colinAdmin / secret123</span> (change in code).</p>
+      <div id="loginStatus" class="small"></div>
+    </section>
+    <section class="card">
+      <h2>Sign Up</h2>
+      <label class="k">Username</label><input id="signupUser" />
+      <label class="k">Password</label><input id="signupPass" type="password" />
+      <button id="signupBtn">Create Account</button>
+      <div class="small">Passwords are stored hashed (SHA‑256) in your browser.</div>
+      <div id="signupStatus" class="small"></div>
+    </section>
+  </div>
+  <section class="card" id="meSection" style="display:none;margin-top:16px">
+    <h2>Your Bookings</h2>
+    <div id="myBookings"></div>
+    <button id="logoutBtn" style="margin-top:10px">Log Out</button>
+  </section>
+</main>
+
+  <footer>
+    © Two Colins Catering · First‑come, first‑served · Weekends after 1:00 PM · Erin gets priority holds
+  </footer>
+
+</body></html>
