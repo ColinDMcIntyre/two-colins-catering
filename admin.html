@@ -1,0 +1,62 @@
+
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Two Colins Catering · Admin</title>
+<link rel="stylesheet" href="style.css" />
+<script src="common.js"></script>
+<script src="admin.js"></script>
+</head><body>
+
+  <div class="header">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div class="brand"><span class="badge">Two Colins Catering</span><h1>Reliable Weekend Event Support</h1></div>
+      <nav>
+        <a href="index.html" >Home</a>
+        <a href="booking.html" >Booking</a>
+        <a href="pricing.html" >Pricing</a>
+        <a href="about.html" >About</a>
+        <a href="contact.html" >Contact</a>
+        <a href="account.html" >Account</a>
+        <a href="admin.html" class="active">Admin</a>
+      </nav>
+    </div>
+  </div>
+
+<main class="container">
+  <section class="card">
+    <h2>Admin Dashboard</h2>
+    <div class="grid-3">
+      <div class="item card"><div class="k">Crew size</div><div class="v" id="crewVal">—</div></div>
+      <div class="item card"><div class="k">Total bookings</div><div class="v" id="bookingsVal">—</div></div>
+      <div class="item card"><div class="k">Pending holds</div><div class="v" id="pendingVal">—</div></div>
+    </div>
+    <div class="grid-2" style="margin-top:10px">
+      <div class="card">
+        <h3>Settings</h3>
+        <label class="k">Crew size</label><input id="crewInput" type="number" min="1" max="20" />
+        <label class="k">Weekend only</label><select id="weekendOnly"><option value="true">Yes</option><option value="false">No</option></select>
+        <label class="k">Start at or after</label><input id="startAfter" type="time" value="13:00" />
+        <label class="k">Minimum hours</label><input id="minHours" type="number" min="1" value="2" />
+        <label class="k">Base flat per helper</label><input id="baseFlat" type="number" value="200" />
+        <label class="k">Base hours covered</label><input id="baseHours" type="number" value="3" />
+        <label class="k">Hourly after base</label><input id="hourlyAfter" type="number" value="30" />
+        <button id="saveSettings" class="primary" style="margin-top:10px">Save Settings</button>
+      </div>
+      <div class="card">
+        <h3>Bookings</h3>
+        <div id="bookingsTable"></div>
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button id="exportBtn">Export JSON</button>
+          <input id="importInput" type="file" accept="application/json" />
+          <button id="clearBtn">Clear All</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer>
+    © Two Colins Catering · First‑come, first‑served · Weekends after 1:00 PM · Erin gets priority holds
+  </footer>
+
+</body></html>
